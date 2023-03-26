@@ -1,0 +1,8 @@
+#mavenのビルド結果を格納するディレクトリ
+/target
+#Eclipseの構成設定ファイルを格納するディレクトリ
+.settings
+#Eclipseのクラスパス設定ファイル
+.classpath
+#Eclipseのプロジェクト設定ファイル
+.project
