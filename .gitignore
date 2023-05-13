@@ -6,3 +6,5 @@
 .classpath
 #Eclipseのプロジェクト設定ファイル
 .project
+#Eclipseのプロジェクト設定ファイル
+/WebContent/WEB-INF/classes
