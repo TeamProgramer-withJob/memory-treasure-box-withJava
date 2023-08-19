@@ -1,6 +1,8 @@
-package com.memorytreasurebox.rogin.ctrl;
+package com.memorytreasurebox.customerRegist.ctrl;
 
 import java.io.IOException;
+
+import com.memorytreasurebox.customerRegist.model.CustomerRegistModel;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -10,13 +12,13 @@ import jakarta.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class LoginCtrl
  */
-public class LoginCtrl extends HttpServlet {
+public class CustomerRegistCtrl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public LoginCtrl() {
+	public CustomerRegistCtrl() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -42,6 +44,12 @@ public class LoginCtrl extends HttpServlet {
 		String userSei = request.getParameter("userSei");
 		String userMei = request.getParameter("userMei");
 		String email = request.getParameter("email");
+		
+		CustomerRegistModel newAccount = new CustomerRegistModel(userID,password,userSei,userMei,email);
+		
+		request.setAttribute("newAccount", newAccount);
+		
+		response.sendRedirect("LoginNewRegistConfirm.jsp");
 
 	}
 
